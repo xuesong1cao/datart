@@ -31,7 +31,7 @@ public interface FolderMapperExt extends FolderMapper {
             "</if>",
             "</script>",
     })
-    List<Folder> checkVizName(String orgId, String parentId, String name);
+    List<Folder> checkVizName(String orgId, @Param("parentId") String parentId, String name);
 
     @Delete({
             "DELETE FROM folder WHERE rel_type=#{relType} and rel_id=#{relId}"
